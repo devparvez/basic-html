@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket bat animation html and css3</title>
+    <style>
+        .bat{
+            width:30%;
+        }
+        .field{
+            border:1px solid blue;
+        }
+        .bat{
+            transition: transform .2s ease-in;
+        }
+       
+        .field:hover .bat{
+            
+            transform: rotate(-80deg);
+            transform-origin: top right;
+        }
+        .ball{
+            width:50px;
+            height:50px;
+            border-radius: 25px;
+            background-color: blue;
+            position:relative;
+            left:400px;
+            bottom:75px;
+            transition: transform 1s ease-out .3s;
+            
+        }
+        .field:hover .ball{
+            transform: translate(400px,-80px);
+        }
+    </style>
+</head>
+<body>
+    <div class="field">
+
+        <img class="bat" src="images/bat.png" alt="cricket bat">
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>
